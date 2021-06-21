@@ -13,6 +13,10 @@ def index():
 def hello():
     return render_template("main.html")
 
+@app.route('/lckproduce')
+def pro():
+    return render_template("lckproduce.html")
+
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     if request.method == 'GET':
@@ -84,5 +88,5 @@ def gonaver():
         return '당신이 검색한 키워드(POST)<br>{}입니다'.format(search)
 
 
-##if __name__ == '__main__':
-##  app.run()
+if __name__ == '__main__':
+    app.run()
