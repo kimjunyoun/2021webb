@@ -1,9 +1,9 @@
 import pymysql
 
 def insert_data(email, pw):
-    db = pymysql.connect(host='bemyluv1.mysql.pythonanywhere-services.com',
-                    user='bemyluv1', password='kk2563159@',
-                    db='bemyluv1$mydb', charset='utf8')
+    db = pymysql.connect(host='kimjunyoung12345.mysql.pythonanywhere-services.com',
+                    user='kimjunyoung12345', password='kk2563159',
+                    db='kimjunyoung12345$mydb', charset='utf8')
     c = db.cursor()
     setdata = (email, pw)
     c.execute("INSERT INTO user_tb VALUES (%s, %s)", setdata)
